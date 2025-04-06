@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         }
 
+        // Checks if player will hit anything on the x-direction using box casting
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), 
                 Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
         if (hit.collider != null)
@@ -40,10 +41,19 @@ public class PlayerController : MonoBehaviour
             moveDelta.x = 0;
         }
 
+        // Checks if player will hit anything on the y-direction using box casting
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), 
                 Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
         if (hit.collider != null) {
             moveDelta.y = 0;
+        }
+
+        // Checks if player will hit anything on the xy-direction using box casting
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, moveDelta.y),
+                Mathf.Abs(moveDelta.magnitude * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
+        if (hit.collider != null)
+        {
+            moveDelta = Vector3.zero;
         }
 
         // Movement
