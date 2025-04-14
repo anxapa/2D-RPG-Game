@@ -3,7 +3,7 @@ using UnityEngine;
 public class Chest : Collectable
 {
     [SerializeField] private Sprite _emptySprite;
-    [SerializeField] private int _goldAmount;
+    [SerializeField] private int _goldAmount = 5;
 
     // Components
     private SpriteRenderer _spriteRenderer;
