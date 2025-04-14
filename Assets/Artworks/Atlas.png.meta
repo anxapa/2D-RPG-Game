@@ -5991,7 +5991,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_256
+      name: chest_silver_0
       rect:
         serializedVersion: 2
         x: 224
@@ -6013,7 +6013,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_257
+      name: chest_gold_0
       rect:
         serializedVersion: 2
         x: 240
@@ -6343,7 +6343,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_272
+      name: chest_silver_1
       rect:
         serializedVersion: 2
         x: 224
@@ -6365,7 +6365,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_273
+      name: chest_gold_1
       rect:
         serializedVersion: 2
         x: 240
@@ -6673,7 +6673,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_287
+      name: chest_silver_2
       rect:
         serializedVersion: 2
         x: 224
@@ -6695,7 +6695,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_288
+      name: chest_gold_2
       rect:
         serializedVersion: 2
         x: 240
@@ -7426,8 +7426,6 @@ TextureImporter:
       Atlas_253: 855292867
       Atlas_254: 413865597
       Atlas_255: -1075046909
-      Atlas_256: -1572195574
-      Atlas_257: -1866568339
       Atlas_258: 1902290216
       Atlas_259: -814910463
       Atlas_26: -1824926578
@@ -7444,8 +7442,6 @@ TextureImporter:
       Atlas_27: -1974415038
       Atlas_270: 1047691703
       Atlas_271: 529698756
-      Atlas_272: -843777272
-      Atlas_273: 887789118
       Atlas_274: 1686899986
       Atlas_275: -1519000142
       Atlas_276: -1101950293
@@ -7460,8 +7456,6 @@ TextureImporter:
       Atlas_284: -2044815550
       Atlas_285: -515043755
       Atlas_286: 479319032
-      Atlas_287: -246568668
-      Atlas_288: -1298834698
       Atlas_289: -2140152111
       Atlas_29: -1903508990
       Atlas_290: 2089662861
@@ -7557,6 +7551,12 @@ TextureImporter:
       Atlas_97: -989656675
       Atlas_98: -665465877
       Atlas_99: -182321469
+      chest_gold_0: -1866568339
+      chest_gold_1: 887789118
+      chest_gold_2: -1298834698
+      chest_silver_0: -1572195574
+      chest_silver_1: -843777272
+      chest_silver_2: -246568668
       floor_0: 66659016
       floor_1: 1010293010
       floor_10: 1226474288
