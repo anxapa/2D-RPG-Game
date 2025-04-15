@@ -22,7 +22,8 @@ public class Chest : Collectable
             collected = true;
 
             _spriteRenderer.sprite = _emptySprite;
-            Debug.Log($"Granted {_goldAmount} gold!");
+            GameManager.instance.gold += _goldAmount;
+            GameManager.instance.ShowText($"+{_goldAmount} gold!", 25, Color.yellow, transform.position, Vector3.up * 25, 1f);
         }
     }
 }
