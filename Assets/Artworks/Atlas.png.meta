@@ -5793,7 +5793,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chest_gold_0
+      name: menu_button_0
       rect:
         serializedVersion: 2
         x: 240
@@ -6585,7 +6585,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_293
+      name: player_old_man
       rect:
         serializedVersion: 2
         x: 96
@@ -6607,7 +6607,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_294
+      name: player_pirate
       rect:
         serializedVersion: 2
         x: 112
@@ -6629,7 +6629,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_295
+      name: player_wizard_orange
       rect:
         serializedVersion: 2
         x: 128
@@ -6651,7 +6651,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_296
+      name: player_wizard_purple
       rect:
         serializedVersion: 2
         x: 144
@@ -6673,7 +6673,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_297
+      name: player_thug_0
       rect:
         serializedVersion: 2
         x: 160
@@ -6695,7 +6695,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_298
+      name: player_thug_1
       rect:
         serializedVersion: 2
         x: 176
@@ -6805,7 +6805,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_303
+      name: player_bearded
       rect:
         serializedVersion: 2
         x: 96
@@ -6827,7 +6827,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_304
+      name: player_girl
       rect:
         serializedVersion: 2
         x: 112
@@ -6849,7 +6849,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_305
+      name: player_viking_blue
       rect:
         serializedVersion: 2
         x: 128
@@ -6871,7 +6871,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_306
+      name: player_viking_brown
       rect:
         serializedVersion: 2
         x: 144
@@ -7240,21 +7240,11 @@ TextureImporter:
       Atlas_290: 2089662861
       Atlas_291: -465930706
       Atlas_292: -1623939148
-      Atlas_293: -789695844
-      Atlas_294: 552467008
-      Atlas_295: 1719815797
-      Atlas_296: 75039273
-      Atlas_297: 1794472722
-      Atlas_298: 1349646203
       Atlas_299: -2097939525
       Atlas_30: -1137124759
       Atlas_300: 214705077
       Atlas_301: -607346535
       Atlas_302: -1362223435
-      Atlas_303: 368526432
-      Atlas_304: 2108289965
-      Atlas_305: 911145063
-      Atlas_306: -751862582
       Atlas_307: 1684942781
       Atlas_308: 1372237804
       Atlas_309: -1699124594
@@ -7320,7 +7310,6 @@ TextureImporter:
       Atlas_97: -989656675
       Atlas_98: -665465877
       Atlas_99: -182321469
-      chest_gold_0: -1866568339
       chest_gold_1: 887789118
       chest_gold_2: -1298834698
       chest_silver_0: -1572195574
@@ -7342,9 +7331,20 @@ TextureImporter:
       fountainRed_0: -1176265194
       fountainRed_1: 1233125102
       fountain_top: -215534945
+      menu_button_0: -1866568339
       orc_regular: 517683886
+      player_bearded: 368526432
       player_elf_green: -284083276206249529
       player_elf_orange: 3910368631869222354
+      player_girl: 2108289965
+      player_old_man: -789695844
+      player_pirate: 552467008
+      player_thug_0: 1794472722
+      player_thug_1: 1349646203
+      player_viking_blue: 911145063
+      player_viking_brown: -751862582
+      player_wizard_orange: 1719815797
+      player_wizard_purple: 75039273
       wall_0: 1621501652
       walls_0: 612944646
       walls_1: -164660989

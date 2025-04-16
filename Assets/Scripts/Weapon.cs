@@ -11,13 +11,17 @@ public class Weapon : Collidable
     private SpriteRenderer _spriteRenderer;
 
     // Swing
-    [SerializeField] private float cooldown = 0.5f;
+    [SerializeField] private float _cooldown = 0.5f;
+    private Animator _animator;
     private float _lastSwing; 
 
     protected override void Start()
     {
         base.Start();
+
+        // Get components
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _animator = GetComponent<Animator>();
     }
 
     protected override void Update()
@@ -26,7 +30,7 @@ public class Weapon : Collidable
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (Time.time - _lastSwing > cooldown)
+            if (Time.time - _lastSwing > _cooldown)
             {
                 _lastSwing = Time.time;
                 Swing();
@@ -47,8 +51,15 @@ public class Weapon : Collidable
         }
     }
 
+    public void UpgradeWeapon()
+    {
+        weaponLevel++;
+        _spriteRenderer.sprite = GameManager.instance.weaponSprites[weaponLevel];
+
+        // Change stats
+    }
     private void Swing()
     {
-        Debug.Log("Swing");
+        _animator.SetTrigger("Swing");
     }
 }

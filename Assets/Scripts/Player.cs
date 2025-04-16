@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Player : Mover
 {
-    protected override void FixedUpdate()
+    private void FixedUpdate()
     {
         // Input handling
         float x = Input.GetAxisRaw("Horizontal");

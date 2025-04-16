@@ -14,6 +14,11 @@ public class Collidable : MonoBehaviour
 
     protected virtual void Update()
     {
+        CheckForCollisions();
+    }
+
+    protected virtual void CheckForCollisions()
+    {
         // Checks for collisions
         _boxCollider.Overlap(_filter, _hits);
 

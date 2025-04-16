@@ -16,15 +16,18 @@ public abstract class Mover : Fighter
         _boxCollider = GetComponent<BoxCollider2D>();
     }
 
-    // Update is called once per frame
-    protected virtual void FixedUpdate()
-    {
-        UpdateMotor(new Vector3(xSpeed, ySpeed, 0));
-    }
-
     protected virtual void UpdateMotor(Vector3 input)
     {
         _moveDelta = new Vector3(input.x * xSpeed, input.y * ySpeed, 0);
+
+        // Set movement to push direction if there is any
+        if (pushDirection != Vector3.zero)
+        {
+            _moveDelta = pushDirection;
+        }
+
+        // Reduce push force every frame, based off recovery speed
+        pushDirection = Vector3.Lerp(pushDirection, Vector3.zero, pushRecoverySpeed);
 
         // Changing sprite to direction
         if (_moveDelta.x > 0)
