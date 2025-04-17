@@ -25,19 +25,16 @@ public abstract class Mover : Fighter
         {
             _moveDelta = pushDirection;
         }
+        // Prevent sprite from changing by getting hit
+        else
+        {
+            // Changing sprite to direction
+            ChangeSpriteToDirection();
+        }
 
         // Reduce push force every frame, based off recovery speed
         pushDirection = Vector3.Lerp(pushDirection, Vector3.zero, pushRecoverySpeed);
-
-        // Changing sprite to direction
-        if (_moveDelta.x > 0)
-        {
-            transform.localScale = Vector3.one;
-        }
-        else if (_moveDelta.x < 0)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
+        
 
         // Checks if player will hit anything on the x-direction using box casting
         _hit = Physics2D.BoxCast(transform.position, _boxCollider.size, 0, new Vector2(_moveDelta.x, 0),
@@ -65,5 +62,17 @@ public abstract class Mover : Fighter
 
         // Movement
         transform.Translate(_moveDelta * Time.deltaTime);
+    }
+
+    protected virtual void ChangeSpriteToDirection()
+    {
+        if (_moveDelta.x > 0)
+        {
+            transform.localScale = Vector3.one;
+        }
+        else if (_moveDelta.x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 }

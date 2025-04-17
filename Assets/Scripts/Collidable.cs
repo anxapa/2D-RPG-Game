@@ -4,7 +4,7 @@ public class Collidable : MonoBehaviour
 {
     [SerializeField] private ContactFilter2D _filter;
     private BoxCollider2D _boxCollider;
-    private Collider2D[] _hits = new Collider2D[10];
+    private Collider2D[] _hits = new Collider2D[30];
 
     protected virtual void Start()
     {

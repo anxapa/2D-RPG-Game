@@ -10,7 +10,13 @@ public class FloatingTextManager : MonoBehaviour
 
     private List<FloatingText> _floatingTexts = new List<FloatingText>();
 
-    // Show floating text
+    private void Update()
+    {
+        foreach (FloatingText txt in _floatingTexts)
+        {
+            txt.UpdateFloatingText();
+        }
+    }
     public void Show(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {
         FloatingText floatingText = GetFloatingText();
@@ -29,13 +35,6 @@ public class FloatingTextManager : MonoBehaviour
         floatingText.Show();
     }
 
-    private void Update()
-    {
-        foreach(FloatingText txt in _floatingTexts)
-        {
-            txt.UpdateFloatingText();
-        }
-    }
 
     // Object pool for floating text
     private FloatingText GetFloatingText()

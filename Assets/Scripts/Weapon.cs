@@ -3,12 +3,12 @@ using UnityEngine;
 public class Weapon : Collidable
 {
     // Damage struct
-    public int damagePoint = 1;
-    public float pushForce = 2.0f;
+    public int[] damagePoint = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    public float[] pushForce = {4.0f, 4.5f, 5.0f, 5.5f, 6.0f, 6.5f, 7.0f, 7.5f, 8.0f, 8.5f};
 
     // Upgrade
     public int weaponLevel = 0;
-    private SpriteRenderer _spriteRenderer;
+    public SpriteRenderer _spriteRenderer;
 
     // Swing
     [SerializeField] private float _cooldown = 0.5f;
@@ -20,7 +20,6 @@ public class Weapon : Collidable
         base.Start();
 
         // Get components
-        _spriteRenderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
     }
 
@@ -45,7 +44,7 @@ public class Weapon : Collidable
             Debug.Log(coll.name);
 
             // Create new Damage object, and send it to fighter.
-            Damage dmg = new Damage(transform.position, damagePoint, pushForce);
+            Damage dmg = new Damage(transform.position, damagePoint[weaponLevel], pushForce[weaponLevel]);
 
             coll.SendMessage("ReceiveDamage", dmg);
         }
@@ -61,5 +60,12 @@ public class Weapon : Collidable
     private void Swing()
     {
         _animator.SetTrigger("Swing");
+    }
+
+    // Sets the weapon level to an integer and assigns the sprite accordingly
+    public void SetWeaponLevel(int level)
+    {
+        weaponLevel = level;
+        _spriteRenderer.sprite = GameManager.instance.weaponSprites[weaponLevel];
     }
 }

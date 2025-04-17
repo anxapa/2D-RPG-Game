@@ -2,9 +2,14 @@ using UnityEngine;
 
 public class CameraMotor : MonoBehaviour
 {
-    [SerializeField] private Transform lookAt;
     [SerializeField] private float boundX = 0.15f;
     [SerializeField] private float boundY = 0.05f;
+    private Transform lookAt;
+
+    private void Start()
+    {
+        lookAt = GameManager.instance.player.transform;
+    }
 
     private void LateUpdate()
     {

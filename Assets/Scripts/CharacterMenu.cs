@@ -9,7 +9,6 @@ public class CharacterMenu : MonoBehaviour
         _upgradeCostText, _xpText;
 
     // Logic
-    private int _currentCharacterSelection = 0;
     public Image _characterSelectionSprite;
     public Image _weaponSprite;
     public RectTransform _xpBar;
@@ -19,19 +18,19 @@ public class CharacterMenu : MonoBehaviour
     {
         if (right)
         {
-            _currentCharacterSelection++;
+            GameManager.instance.currentCharacterSelection++;
 
             // Makes sure we do not go outside of the sprite array bound
-            if (_currentCharacterSelection >= GameManager.instance.playerSprites.Count)
-                _currentCharacterSelection = 0;
+            if (GameManager.instance.currentCharacterSelection >= GameManager.instance.playerSprites.Count)
+                GameManager.instance.currentCharacterSelection = 0;
         }
         else
         {
-            _currentCharacterSelection--;
+            GameManager.instance.currentCharacterSelection--;
 
             // Makes sure we do not go outside of the sprite array bound
-            if (_currentCharacterSelection < 0)
-                _currentCharacterSelection = GameManager.instance.playerSprites.Count - 1;
+            if (GameManager.instance.currentCharacterSelection < 0)
+                GameManager.instance.currentCharacterSelection = GameManager.instance.playerSprites.Count - 1;
         }
 
         OnSelectionChanged();
@@ -39,7 +38,8 @@ public class CharacterMenu : MonoBehaviour
 
     private void OnSelectionChanged()
     {
-        _characterSelectionSprite.sprite = GameManager.instance.playerSprites[_currentCharacterSelection];
+        _characterSelectionSprite.sprite = GameManager.instance.playerSprites[GameManager.instance.currentCharacterSelection];
+        GameManager.instance.player.SwapSprite(GameManager.instance.currentCharacterSelection);
     }
 
     // Weapon Upgrade
@@ -54,17 +54,41 @@ public class CharacterMenu : MonoBehaviour
     // Update the character information
     public void UpdateMenu()
     {
+        // Make sprite reload on open
+        OnSelectionChanged();
+
         // Weapon
-        _weaponSprite.sprite = GameManager.instance.weaponSprites[0];
-        _upgradeCostText.text = "NOT IMPLEMENTED";
+        _weaponSprite.sprite = GameManager.instance.weaponSprites[GameManager.instance.weapon.weaponLevel];
+
+        // Weapon not maxed out
+        if (GameManager.instance.weapon.weaponLevel < GameManager.instance.weaponPrices.Count)
+            _upgradeCostText.text = GameManager.instance.weaponPrices[GameManager.instance.weapon.weaponLevel].ToString();
+        // Weapon maxed out
+        else
+            _upgradeCostText.text = "MAX";
 
         // Meta
-        _levelText.text = "NOT IMPLEMENTED";
-        _hitpointText.text = GameManager.instance.player.hitpoints.ToString();
+        _levelText.text = GameManager.instance.GetCurrentLevel().ToString();
+        _hitpointText.text = $"{GameManager.instance.player.hitpoints} / {GameManager.instance.player.maxHitpoints}";
         _goldText.text = GameManager.instance.gold.ToString();
 
         // XP Bar
-        _xpText.text = "NOT IMPLEMENTED";
-        _xpBar.localScale = new Vector3(0.5f, 1, 1);
+        int currentLevel = GameManager.instance.GetCurrentLevel();
+
+        if (currentLevel >= GameManager.instance.xpTable.Count) // Checks if player is max level
+        {
+            _xpText.text = $"{GameManager.instance.experience} xp points";
+            _xpBar.localScale = Vector3.one;
+        }
+        else
+        {
+            // Calculate current XP
+            int prevXpNeeded = GameManager.instance.GetXpToLevel(currentLevel - 1);
+            int currentXP = GameManager.instance.experience - prevXpNeeded;
+
+            // Using current level - 1 since player level starts at 1 yet array starts at 0.
+            _xpText.text = $"{currentXP} / {GameManager.instance.xpTable[currentLevel - 1]}";
+            _xpBar.localScale = new Vector3((float) currentXP / GameManager.instance.xpTable[currentLevel - 1], 1f, 1f);
+        }
     }
 }

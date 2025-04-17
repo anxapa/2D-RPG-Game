@@ -82,11 +82,21 @@ public class Enemy : Mover
             _hits[i] = null;
         }
     }
-
     protected override void Death()
     {
         Destroy(gameObject);
-        GameManager.instance.experience += xpValue;
+        GameManager.instance.GrantXP(xpValue);
         GameManager.instance.ShowText($"+ {xpValue} xp", 30, Color.magenta, transform.position, Vector3.up * 40, 1.0f);
+    }
+    protected override void ChangeSpriteToDirection()
+    {
+        if (_moveDelta.x < 0)
+        {
+            transform.localScale = Vector3.one;
+        }
+        else if (_moveDelta.x > 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 }

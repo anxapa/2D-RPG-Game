@@ -7,7 +7,7 @@ public class Fighter : MonoBehaviour
     public float pushRecoverySpeed = 0.2f;
 
     // Immunity
-    protected float immuneTime = 1.0f;
+    [SerializeField] protected float immuneTime = 1.0f;
     protected float lastImmune;
 
     // Push

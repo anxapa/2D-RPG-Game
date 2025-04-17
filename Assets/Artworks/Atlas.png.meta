@@ -222,7 +222,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 99
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -3307,7 +3307,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_144
+      name: crate_1
       rect:
         serializedVersion: 2
         x: 80
@@ -3329,7 +3329,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_145
+      name: crate_3
       rect:
         serializedVersion: 2
         x: 96
@@ -3879,7 +3879,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_170
+      name: crate_0
       rect:
         serializedVersion: 2
         x: 80
@@ -3901,7 +3901,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_171
+      name: crate_2
       rect:
         serializedVersion: 2
         x: 96
@@ -4957,182 +4957,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_219
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5aaa55b94812cf24a805e4bfd0c996d0
-      internalID: 130908834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atlas_220
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b46ef1fafc39bf9429fef0ccdb954cbe
-      internalID: 1677692503
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atlas_221
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1cdd93a32e614b245ba7f02f7d68cb96
-      internalID: -882502647
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atlas_222
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd08f693c648d5e4480ad10dee6af923
-      internalID: -2069698278
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atlas_223
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a19a7684d2a7b7a4ca239229362f1797
-      internalID: -1202393552
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atlas_224
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: edb19a670354c0e45bac73f98a2ea481
-      internalID: 61854951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atlas_225
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb8fd79ae5b449349a0ca4ed033f60bd
-      internalID: 263414544
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atlas_226
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8959293a5de39a4fa07675564d4e846
-      internalID: -1624184924
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Atlas_227
       rect:
         serializedVersion: 2
@@ -5265,13 +5089,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_233
+      name: torch_0
       rect:
         serializedVersion: 2
         x: 112
         y: 80
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5287,13 +5111,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_234
+      name: torch_1
       rect:
         serializedVersion: 2
         x: 128
         y: 80
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5309,13 +5133,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_235
+      name: torch_2
       rect:
         serializedVersion: 2
         x: 144
         y: 80
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5331,13 +5155,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_236
+      name: torch_3
       rect:
         serializedVersion: 2
         x: 160
         y: 80
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5353,13 +5177,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_237
+      name: torch_4
       rect:
         serializedVersion: 2
         x: 176
         y: 80
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5375,13 +5199,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_238
+      name: torch_5
       rect:
         serializedVersion: 2
         x: 192
         y: 80
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5397,13 +5221,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_239
+      name: torch_6
       rect:
         serializedVersion: 2
         x: 208
         y: 80
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5419,13 +5243,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_240
+      name: torch_7
       rect:
         serializedVersion: 2
         x: 224
         y: 80
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5441,13 +5265,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_241
+      name: torch_8
       rect:
         serializedVersion: 2
         x: 240
         y: 80
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7094,8 +6918,6 @@ TextureImporter:
       Atlas_138: -61078749
       Atlas_139: 1391363058
       Atlas_14: -1803287486
-      Atlas_144: 475640804
-      Atlas_145: 1604097721
       Atlas_146: -2056431043
       Atlas_147: -2042426722
       Atlas_148: 1515790834
@@ -7119,8 +6941,6 @@ TextureImporter:
       Atlas_164: 1740777482
       Atlas_169: -584641211
       Atlas_17: 28232743
-      Atlas_170: -2088722868
-      Atlas_171: -1832948539
       Atlas_172: 1330617453
       Atlas_173: 595883009
       Atlas_174: 1566702042
@@ -7181,15 +7001,6 @@ TextureImporter:
       Atlas_230: 526009601
       Atlas_231: 2104585690
       Atlas_232: -16537420
-      Atlas_233: -308535191
-      Atlas_234: -1690790761
-      Atlas_235: -240527279
-      Atlas_236: -2072228098
-      Atlas_237: 341711816
-      Atlas_238: -536671166
-      Atlas_239: 2047377677
-      Atlas_240: 1469588584
-      Atlas_241: -1680829750
       Atlas_242: 1742249801
       Atlas_243: 249739356
       Atlas_244: -1807875821
@@ -7315,6 +7126,10 @@ TextureImporter:
       chest_silver_0: -1572195574
       chest_silver_1: -843777272
       chest_silver_2: -246568668
+      crate_0: -2088722868
+      crate_1: 475640804
+      crate_2: -1832948539
+      crate_3: 1604097721
       floor_0: 66659016
       floor_1: 1010293010
       floor_10: 1226474288
@@ -7345,6 +7160,15 @@ TextureImporter:
       player_viking_brown: -751862582
       player_wizard_orange: 1719815797
       player_wizard_purple: 75039273
+      torch_0: -308535191
+      torch_1: -1690790761
+      torch_2: -240527279
+      torch_3: -2072228098
+      torch_4: 341711816
+      torch_5: -536671166
+      torch_6: 2047377677
+      torch_7: 1469588584
+      torch_8: -1680829750
       wall_0: 1621501652
       walls_0: 612944646
       walls_1: -164660989
