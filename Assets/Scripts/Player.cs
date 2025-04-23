@@ -3,10 +3,15 @@ using UnityEngine;
 
 public class Player : Mover
 {
+    private bool _isAlive = true;
+
     // Components
     [SerializeField] private SpriteRenderer _spriteRenderer;
     private void FixedUpdate()
     {
+        if (!_isAlive)
+            return;
+
         // Input handling
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
@@ -16,9 +21,19 @@ public class Player : Mover
 
     protected override void ReceiveDamage(Damage dmg)
     {
+        if (!_isAlive)
+            return;
+
         base.ReceiveDamage(dmg);
         GameManager.instance.OnHitpointChange();
     }
+
+    protected override void Death()
+    {
+        _isAlive = false;
+        GameManager.instance.deathMenuAnimator.SetTrigger("Show");
+    }
+
     public void SwapSprite(int spriteNumber)
     {
         _spriteRenderer.sprite = GameManager.instance.playerSprites[spriteNumber];
@@ -50,5 +65,13 @@ public class Player : Mover
         
         GameManager.instance.ShowText($"+{healAmount} hp", 20, Color.green, transform.position, Vector3.up * 20f, 1f);
         GameManager.instance.OnHitpointChange();
+    }
+
+    public void Respawn()
+    {
+        Heal(maxHitpoints);
+        _isAlive = true;
+        lastImmune = Time.time;
+        pushDirection = Vector3.zero;
     }
 }

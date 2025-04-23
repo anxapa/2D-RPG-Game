@@ -2,13 +2,15 @@ using UnityEngine;
 
 public abstract class Mover : Fighter
 {
+    [Header("Mover Attributes")]
     protected BoxCollider2D _boxCollider;
     protected Vector3 _moveDelta;
     protected RaycastHit2D _hit;
 
     // Speed of movement
-    protected float ySpeed = 0.75f;
-    protected float xSpeed = 1.0f;
+    [SerializeField] protected float _speedMultiplier = 1f;
+    protected float _ySpeed = 0.75f;
+    protected float _xSpeed = 1.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Start()
@@ -18,7 +20,7 @@ public abstract class Mover : Fighter
 
     protected virtual void UpdateMotor(Vector3 input)
     {
-        _moveDelta = new Vector3(input.x * xSpeed, input.y * ySpeed, 0);
+        _moveDelta = new Vector3(input.x * _xSpeed, input.y * _ySpeed, 0) * _speedMultiplier;
 
         // Set movement to push direction if there is any
         if (pushDirection != Vector3.zero)

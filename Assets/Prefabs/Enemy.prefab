@@ -151,8 +151,10 @@ MonoBehaviour:
   hitpoints: 3
   maxHitpoints: 3
   pushRecoverySpeed: 0.4
+  immuneTime: 1
+  _speedMultiplier: 0.75
   xpValue: 2
-  triggerLength: 0.3
+  triggerLength: 0.6
   chaseLength: 1
 --- !u!1 &6557494636057624354
 GameObject:

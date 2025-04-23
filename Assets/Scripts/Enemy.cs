@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Enemy : Mover
 {
+    [Header("Enemy Attributes")]
     // Experience
     public int xpValue = 1;
 

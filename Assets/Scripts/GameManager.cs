@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEditor;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -22,14 +21,15 @@ public class GameManager : MonoBehaviour
     public Player player;
     public Weapon weapon;
     public FloatingTextManager floatingTextManager;
+    public Animator deathMenuAnimator;
     public RectTransform hitpointBar;
     public GameObject menu;
     public GameObject hud;
 
     // Logic
     [Header("Logic")]
-    public int gold;
-    public int experience;
+    public int gold = 0;
+    public int experience = 1;
     public int currentCharacterSelection = 0;
 
     private void Awake()
@@ -123,10 +123,31 @@ public class GameManager : MonoBehaviour
         hitpointBar.localScale = new Vector3(1f, ratio, 1f);
     }
 
+    // Death Menu Respawn
+    public void Respawn()
+    {
+        deathMenuAnimator.SetTrigger("Hide");
+        DeleteState();
+        player.Respawn();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
+    }
     public void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, LoadSceneMode loadSceneMode)
     {
         // Set player position to scene's spawn point
         player.transform.position = GameObject.Find("SpawnPoint").transform.position;
+    }
+
+    public void DeleteState()
+    {
+        // The data being stored for the GameState
+        string s = "";
+
+        s += currentCharacterSelection.ToString() + "|";
+        s += 0 + "|"; // gold
+        s += 1 + "|";   // experience
+        s += 0.ToString(); // weaponLevel
+
+        PlayerPrefs.SetString("SaveState", s);
     }
 
     // Saves the game progress

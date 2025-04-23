@@ -4957,7 +4957,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_227
+      name: orc_small
       rect:
         serializedVersion: 2
         x: 0
@@ -5419,50 +5419,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_248
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c3f8cb4b278079d46bc15d75a1a9af00
-      internalID: -313378934
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atlas_249
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85581ad1dd53ec347b8f902d45277d2c
-      internalID: -2036601334
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Atlas_250
       rect:
         serializedVersion: 2
@@ -5771,13 +5727,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_264
+      name: orc_boss
       rect:
         serializedVersion: 2
         x: 96
         y: 48
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5788,28 +5744,6 @@ TextureImporter:
       bones: []
       spriteID: d6ff50db2b9b736489e685164e8aae5f
       internalID: -931286177
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atlas_265
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 57f17f5e47ebaba49bb6b340aa19ce49
-      internalID: -151862862
       vertices: []
       indices: 
       edges: []
@@ -6996,7 +6930,6 @@ TextureImporter:
       Atlas_224: 61854951
       Atlas_225: 263414544
       Atlas_226: -1624184924
-      Atlas_227: 132779673
       Atlas_228: 1851534840
       Atlas_230: 526009601
       Atlas_231: 2104585690
@@ -7023,7 +6956,6 @@ TextureImporter:
       Atlas_261: -142065678
       Atlas_262: 1054536352
       Atlas_263: -962315460
-      Atlas_264: -931286177
       Atlas_265: -151862862
       Atlas_266: 1649169911
       Atlas_267: -1225282312
@@ -7147,7 +7079,9 @@ TextureImporter:
       fountainRed_1: 1233125102
       fountain_top: -215534945
       menu_button_0: -1866568339
+      orc_boss: -931286177
       orc_regular: 517683886
+      orc_small: 132779673
       player_bearded: 368526432
       player_elf_green: -284083276206249529
       player_elf_orange: 3910368631869222354
