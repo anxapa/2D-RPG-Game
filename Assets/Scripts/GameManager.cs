@@ -137,17 +137,12 @@ public class GameManager : MonoBehaviour
         player.transform.position = GameObject.Find("SpawnPoint").transform.position;
     }
 
+    // Reset save of the player
     public void DeleteState()
     {
-        // The data being stored for the GameState
-        string s = "";
-
-        s += currentCharacterSelection.ToString() + "|";
-        s += 0 + "|"; // gold
-        s += 1 + "|";   // experience
-        s += 0.ToString(); // weaponLevel
-
-        PlayerPrefs.SetString("SaveState", s);
+        gold = 0;
+        experience = 1;
+        weapon.SetWeaponLevel(0);
     }
 
     // Saves the game progress

@@ -53582,7 +53582,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   _sceneNames:
-  - Dungeon1
+  - MainScene
 --- !u!61 &1487371736
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -57878,7 +57878,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   _sceneNames:
-  - MainScene
+  - dfMainScene
 --- !u!61 &1615437557
 BoxCollider2D:
   m_ObjectHideFlags: 0
